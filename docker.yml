@@ -1,5 +1,8 @@
 ---
 - hosts: all
+  become: true
+  vars:
+   ansible_become_pass: edureka
   tasks:
   - name: Add Docker GPG key
     apt_key: url=https://download.docker.com/linux/ubuntu/gpg
